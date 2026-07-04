@@ -3,57 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Steinlach Data Science and Consulting UG</title>
-  <meta name="description" content="Statistische Beratung, Datenanalyse und wissenschaftliche Auswertung für medizinische und klinische Forschungsprojekte.">
+  <title>Steinlach Data Science and Consulting UG (haftungsbeschränkt)</title>
+  <meta name="description" content="Statistische Beratung, reproduzierbare Datenanalyse und wissenschaftliche Ergebnisdarstellung für akademische Forschungsprojekte.">
 
   <style>
     :root {
-      --bg: #f7f4ec;
-      --card: #ffffff;
-      --text: #18352f;
-      --muted: #5f6f6a;
-      --green: #1f5a46;
-      --blue: #1477a8;
-      --light: #eef6f3;
-      --line: #d9e4df;
-      --shadow: 0 18px 50px rgba(20, 50, 43, .12);
+      --cream: #f5efe2;
+      --cream2: #fbf8f0;
+      --green: #174b3d;
+      --green2: #2f6b4f;
+      --blue: #1479a9;
+      --text: #1e302b;
+      --muted: #64736d;
+      --line: #ded7c8;
+      --white: #ffffff;
+      --shadow: 0 18px 45px rgba(40, 55, 48, 0.12);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--cream);
       color: var(--text);
       line-height: 1.65;
     }
 
-    a { color: var(--blue); }
+    p, li, a, small, nav {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    a {
+      color: var(--blue);
+    }
 
     header {
-      min-height: 92vh;
       background:
-        linear-gradient(90deg, rgba(247,244,236,.96), rgba(247,244,236,.78)),
+        linear-gradient(90deg, rgba(245,239,226,.98), rgba(245,239,226,.88)),
         url("assets/steinlachjbach.jpg") center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
+      border-bottom: 1px solid var(--line);
     }
 
     .nav {
-      max-width: 1180px;
-      width: 100%;
+      max-width: 1140px;
       margin: 0 auto;
-      padding: 22px;
+      padding: 22px 22px 12px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 18px;
     }
 
     .nav img {
-      width: 88px;
-      height: 88px;
+      width: 84px;
+      height: 84px;
       object-fit: contain;
       border-radius: 18px;
     }
@@ -62,14 +68,14 @@
       margin-left: 22px;
       text-decoration: none;
       color: var(--green);
-      font-weight: 750;
+      font-weight: 700;
+      font-size: .95rem;
     }
 
     .hero {
-      max-width: 1180px;
-      width: 100%;
-      margin: auto;
-      padding: 40px 22px 90px;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 46px 22px 82px;
       display: grid;
       grid-template-columns: 1.1fr .9fr;
       gap: 46px;
@@ -77,24 +83,24 @@
     }
 
     .hero h1 {
-      font-size: clamp(2.4rem, 6vw, 5.2rem);
-      line-height: 1.02;
-      margin: 0 0 24px;
-      letter-spacing: -1.8px;
+      margin: 0 0 18px;
       color: var(--green);
+      font-size: clamp(2.5rem, 5.8vw, 5rem);
+      line-height: 1.03;
+      letter-spacing: -1.4px;
     }
 
-    .hero p {
-      font-size: 1.25rem;
+    .hero .subtitle {
       max-width: 760px;
-      color: #3e514c;
-      margin: 0 0 28px;
+      font-size: 1.18rem;
+      color: #40534d;
+      margin: 0 0 26px;
     }
 
     .hero-logo {
-      background: rgba(255,255,255,.78);
-      border: 1px solid rgba(255,255,255,.75);
-      border-radius: 34px;
+      background: rgba(255,255,255,.74);
+      border: 1px solid rgba(255,255,255,.85);
+      border-radius: 30px;
       padding: 24px;
       box-shadow: var(--shadow);
       text-align: center;
@@ -103,67 +109,74 @@
     .hero-logo img {
       max-width: 100%;
       border-radius: 24px;
+      display: block;
     }
 
     .button {
       display: inline-block;
       background: var(--green);
       color: white;
-      padding: 13px 21px;
+      padding: 12px 20px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: 800;
-      box-shadow: 0 14px 35px rgba(31,90,70,.25);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      box-shadow: 0 12px 28px rgba(23,75,61,.22);
     }
 
     main {
-      max-width: 1180px;
+      max-width: 1140px;
       margin: 0 auto;
-      padding: 0 22px 60px;
+      padding: 34px 22px 64px;
     }
 
     section {
-      background: var(--card);
+      background: rgba(255,255,255,.76);
       border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 38px;
-      margin-bottom: 26px;
+      border-radius: 26px;
+      padding: 36px;
+      margin-bottom: 24px;
       box-shadow: var(--shadow);
     }
 
     h2 {
-      margin: 0 0 14px;
-      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      margin: 0 0 12px;
       color: var(--green);
-      letter-spacing: -.5px;
+      font-size: clamp(1.65rem, 3vw, 2.25rem);
+      line-height: 1.18;
+      letter-spacing: -.4px;
     }
 
     .lead {
-      color: var(--muted);
-      font-size: 1.08rem;
       margin-top: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
     }
 
     .grid3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
-      margin-top: 24px;
+      margin-top: 22px;
     }
 
-    .service {
-      background: var(--light);
+    .card {
+      background: var(--cream2);
       border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 24px;
+      border-radius: 20px;
+      padding: 22px;
     }
 
-    .service h3 {
+    .card h3 {
       margin: 0 0 10px;
       color: var(--green);
+      font-size: 1.15rem;
     }
 
-    .service p { margin: 0; color: var(--muted); }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
 
     .two {
       display: grid;
@@ -174,68 +187,72 @@
 
     .portrait {
       width: 100%;
-      max-width: 260px;
-      border-radius: 28px;
-      box-shadow: var(--shadow);
+      max-width: 255px;
       display: block;
       margin: 0 auto;
+      border-radius: 26px;
+      box-shadow: var(--shadow);
     }
 
-    .gallery {
+    .decorative-strip {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
       margin-top: 24px;
     }
 
-    .gallery figure {
-      margin: 0;
-      background: #fbfcfb;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    .gallery img {
+    .decorative-strip img {
       width: 100%;
-      height: 210px;
+      height: 145px;
       object-fit: contain;
       background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 8px;
       display: block;
-      padding: 10px;
     }
 
-    .gallery figcaption {
-      padding: 12px 14px 16px;
-      color: var(--muted);
-      font-size: .92rem;
+    .note {
+      background: #f8f5ec;
+      border-left: 4px solid var(--green2);
+      padding: 16px 18px;
+      border-radius: 12px;
+      color: #53625d;
+      font-size: .96rem;
+      margin-top: 22px;
     }
 
     .contact {
       background:
-        linear-gradient(135deg, rgba(255,255,255,.96), rgba(238,246,243,.94)),
+        linear-gradient(135deg, rgba(255,255,255,.92), rgba(251,248,240,.94)),
         url("assets/steinlachwinter.jpg") center/cover no-repeat;
     }
 
     footer {
-      max-width: 1180px;
+      max-width: 1140px;
       margin: 0 auto;
-      padding: 28px 22px 46px;
+      padding: 26px 22px 46px;
       color: var(--muted);
       display: flex;
       justify-content: space-between;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 18px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .94rem;
     }
 
     footer a {
       color: var(--muted);
-      margin-left: 16px;
+      margin-left: 14px;
     }
 
     @media (max-width: 900px) {
-      .hero, .two, .grid3, .gallery {
+      .hero, .two, .grid3 {
         grid-template-columns: 1fr;
+      }
+
+      .decorative-strip {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .nav {
@@ -247,8 +264,13 @@
         margin: 0 16px 0 0;
       }
 
-      section { padding: 28px; }
-      .hero-logo { max-width: 420px; }
+      section {
+        padding: 28px;
+      }
+
+      .hero-logo {
+        max-width: 430px;
+      }
     }
   </style>
 </head>
@@ -256,10 +278,10 @@
 <body>
   <header>
     <div class="nav">
-      <img src="assets/logo.png" alt="Steinlach Data Science and Consulting Logo">
+      <img src="assets/logo.png" alt="Steinlach Data Science and Consulting UG (haftungsbeschränkt)">
       <nav class="nav-links">
         <a href="#leistungen">Leistungen</a>
-        <a href="#beispiele">Beispiele</a>
+        <a href="#arbeitsweise">Arbeitsweise</a>
         <a href="#profil">Profil</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
@@ -268,117 +290,104 @@
     <div class="hero">
       <div>
         <h1>Turning Data into Publishable Science</h1>
-        <p>
-          Statistische Beratung, Datenanalyse und wissenschaftliche Ergebnisdarstellung
-          für medizinische, klinische und akademische Forschungsprojekte.
+        <p class="subtitle">
+          Statistische Beratung, reproduzierbare Datenanalyse und wissenschaftliche Ergebnisdarstellung
+          für akademische Forschungsprojekte.
         </p>
-        <a class="button" href="mailto:data@steinlachdatascience.de">Projekt anfragen</a>
+        <a class="button" href="mailto:data@steinlachdatascience.de">Kontakt aufnehmen</a>
       </div>
 
       <div class="hero-logo">
-        <img src="assets/logo2.png" alt="Steinlach Data Science and Consulting UG">
+        <img src="assets/logo2.png" alt="Steinlach Data Science and Consulting UG (haftungsbeschränkt)">
       </div>
     </div>
   </header>
 
   <main>
-    <section>
-      <h2>Von Daten zur Publikation</h2>
+    <section id="intro">
+      <h2>Von Daten zur wissenschaftlichen Auswertung</h2>
       <p class="lead">
         Verständlich. Robust. Reproduzierbar.
       </p>
       <p>
-        Steinlach Data Science and Consulting UG unterstützt Forschungsprojekte
-        von der statistischen Planung über die Datenanalyse bis zur klaren
-        Darstellung der Ergebnisse in Tabellen, Abbildungen und Manuskripttexten.
+        Die Steinlach Data Science and Consulting UG (haftungsbeschränkt) unterstützt bei der
+        Planung, Auswertung und Darstellung wissenschaftlicher Daten. Im Mittelpunkt stehen
+        nachvollziehbare Analysen, transparente Dokumentation und reproduzierbare Workflows.
       </p>
+
+      <div class="decorative-strip" aria-hidden="true">
+        <img src="assets/beeswarm.png" alt="">
+        <img src="assets/KM.png" alt="">
+        <img src="assets/calibration.png" alt="">
+        <img src="assets/Aalen.png" alt="">
+        <img src="assets/survprob.png" alt="">
+      </div>
     </section>
 
     <section id="leistungen">
       <h2>Leistungen</h2>
       <p class="lead">
-        Methodisch saubere Auswertungen mit Fokus auf klinische und wissenschaftliche Relevanz.
+        Unterstützung bei der statistischen und datenanalytischen Bearbeitung wissenschaftlicher Fragestellungen.
       </p>
 
       <div class="grid3">
-        <div class="service">
-          <h3>Statistische Analyse</h3>
+        <div class="card">
+          <h3>Statistische Auswertung</h3>
           <p>
-            Deskriptive Statistik, Gruppenvergleiche, Regressionsmodelle,
+            Deskriptive Analysen, Gruppenvergleiche, Regressionsmodelle,
             Überlebenszeitanalysen und Sensitivitätsanalysen.
           </p>
         </div>
 
-        <div class="service">
-          <h3>Visualisierung</h3>
+        <div class="card">
+          <h3>Datenaufbereitung</h3>
           <p>
-            Publikationsfähige Tabellen und Abbildungen zur verständlichen
-            Kommunikation komplexer Ergebnisse.
+            Strukturierung, Prüfung und Dokumentation von Datensätzen als Grundlage
+            für nachvollziehbare und reproduzierbare Analysen.
           </p>
         </div>
 
-        <div class="service">
-          <h3>Manuskript-Support</h3>
+        <div class="card">
+          <h3>Ergebnisdarstellung</h3>
           <p>
-            Methoden- und Ergebnistexte, Reviewer-Responses und strukturierte
-            Dokumentation der Analyseentscheidungen.
+            Erstellung von Tabellen, Abbildungen sowie methodisch präzisen
+            Beschreibungen für wissenschaftliche Texte.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="beispiele">
-      <h2>Beispielhafte Analyseformen</h2>
-      <p class="lead">
-        Von klassischen Modellen bis zu erklärbarer Machine Learning Analyse.
+    <section id="arbeitsweise">
+      <h2>Arbeitsweise</h2>
+      <p>
+        Analysen werden projektspezifisch geplant und transparent dokumentiert. Ziel ist eine
+        klare Verbindung zwischen Fragestellung, Methodik, Ergebnisdarstellung und
+        reproduzierbarem Analyseworkflow.
+      </p>
+      <p>
+        Die Zusammenarbeit kann einzelne Auswertungsschritte, die vollständige statistische
+        Analyse oder die Unterstützung bei methodischen und ergebnisbezogenen Textabschnitten umfassen.
       </p>
 
-      <div class="gallery">
-        <figure>
-          <img src="assets/KM.png" alt="Kaplan-Meier survival analysis">
-          <figcaption>Überlebenszeitanalyse und Kaplan-Meier-Kurven</figcaption>
-        </figure>
-
-        <figure>
-          <img src="assets/beeswarm.png" alt="SHAP beeswarm plot">
-          <figcaption>Modellinterpretation und erklärbare KI/ML-Auswertungen</figcaption>
-        </figure>
-
-        <figure>
-          <img src="assets/calibration.png" alt="Calibration plot">
-          <figcaption>Modellvalidierung, Kalibrierung und Prädiktionsgüte</figcaption>
-        </figure>
-
-        <figure>
-          <img src="assets/Aalen.png" alt="Aalen additive model">
-          <figcaption>Zeitabhängige Effekte und Additive-Hazard-Modelle</figcaption>
-        </figure>
-
-        <figure>
-          <img src="assets/survprob.png" alt="Survival probability surface">
-          <figcaption>Kontinuierliche Risikoflächen und Survival-Surfaces</figcaption>
-        </figure>
-
-        <figure>
-          <img src="assets/cleandataexample.png" alt="Clean data example">
-          <figcaption>Strukturierte Datenaufbereitung und reproduzierbare Workflows</figcaption>
-        </figure>
+      <div class="note">
+        Hinweis: Die Leistungen beziehen sich auf statistische und wissenschaftliche Beratung.
+        Es erfolgt keine medizinische Beratung, keine Patientenbehandlung und keine individuelle
+        Diagnose- oder Therapieempfehlung.
       </div>
     </section>
 
     <section id="profil">
       <div class="two">
         <div>
-          <img class="portrait" src="assets/portraitmihalysulyok.png" alt="Dr. Mihaly Sulyok">
+          <img class="portrait" src="assets/portraitmihalysulyok.png" alt="Dr. Dr. med. Mihaly Sulyok">
         </div>
         <div>
           <h2>Dr. Dr. med. Mihaly Sulyok, MD PhD</h2>
           <p class="lead">Gründer und Geschäftsführer</p>
           <p>
-            Steinlach Data Science and Consulting UG verbindet medizinisches Verständnis,
-            wissenschaftliche Erfahrung und datenanalytische Methodenkompetenz.
-            Ziel ist eine Brücke zwischen klinischer Fragestellung, anspruchsvoller Statistik
-            und klarer wissenschaftlicher Kommunikation.
+            Die Steinlach Data Science and Consulting UG (haftungsbeschränkt) verbindet
+            wissenschaftliche Erfahrung, methodische Sorgfalt und datenanalytische Kompetenz.
+            Ziel ist eine sachliche, reproduzierbare und verständliche Aufbereitung wissenschaftlicher Daten.
           </p>
         </div>
       </div>
@@ -397,10 +406,41 @@
       </p>
       <a class="button" href="mailto:data@steinlachdatascience.de">E-Mail schreiben</a>
     </section>
+
+    <section id="impressum">
+      <h2>Impressum</h2>
+      <p>
+        Steinlach Data Science and Consulting UG (haftungsbeschränkt)<br>
+        Vertreten durch den Geschäftsführer: Dr. Dr. med. Mihaly Sulyok<br>
+        Bildgartenstr. 4<br>
+        72147 Nehren<br>
+        Deutschland
+      </p>
+      <p>
+        E-Mail: <a href="mailto:data@steinlachdatascience.de">data@steinlachdatascience.de</a>
+      </p>
+      <p>
+        Bitte ergänzen, falls vorhanden: Registergericht, Handelsregisternummer, Umsatzsteuer-ID.
+      </p>
+    </section>
+
+    <section id="datenschutz">
+      <h2>Datenschutz</h2>
+      <p>
+        Diese Webseite dient der allgemeinen Information über die Steinlach Data Science and Consulting UG
+        (haftungsbeschränkt). Personenbezogene Daten werden nur verarbeitet, soweit dies zur technischen
+        Bereitstellung der Webseite oder zur Kontaktaufnahme erforderlich ist.
+      </p>
+      <p>
+        Bitte ergänzen Sie hier die vollständige Datenschutzerklärung entsprechend dem tatsächlichen
+        Hosting-Setup, insbesondere Anbieter, Server-Logs, Kontaktaufnahme per E-Mail und ggf. eingesetzte
+        Analyse- oder Sicherheitsdienste.
+      </p>
+    </section>
   </main>
 
   <footer>
-    <div>© Steinlach Data Science and Consulting UG</div>
+    <div>© Steinlach Data Science and Consulting UG (haftungsbeschränkt)</div>
     <div>
       <a href="#kontakt">Kontakt</a>
       <a href="#impressum">Impressum</a>
